@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="rassApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RASS Proto</title>
+	<base href="/rass_prototype/public/">
+
+	<!-- Bootstrap CSS -->
+	<link href="http://localhost/rass_prototype/public/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		var base = 'rass_prototype/public';
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-static-top" role="navigation" ng-controller="NavigationCtrl">
+		<a class="navbar-brand" href="">RASS Proto</a>
+		<ul class="nav navbar-nav">
+			<li ng-class="{ active: item.activated }" ng-repeat="(key, item) in items">
+				<a href="{{ item.url }}" ng-click="activate(item)">{{ item.name }}</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+		<div class="row top-buffer">
+			<div class="col-xs-8 col-xs-offset-2">
+				<!-- Angular UI Views loaded here -->
+				<div class="row" ng-view></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://localhost/rass_prototype/public/lib/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script type="text/javascript" src="http://localhost/rass_prototype/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- Angular Js -->
+	<script type="text/javascript" src="http://localhost/rass_prototype/public/lib/angular/angular.min.js"></script>
+	<!-- Angular UI Router -->
+	<script type="text/javascript" src="http://localhost/rass_prototype/public/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<!-- Angular Resource -->
+	<script type="text/javascript" src="http://localhost/rass_prototype/public/lib/angular-resource/angular-resource.min.js"></script>
+	<!-- Angular Resource -->
+	<script type="text/javascript" src="http://localhost/rass_prototype/public/lib/angular-route/angular-route.min.js">
+	</script>
+	<!-- App Scripts -->
+	<script type="text/javascript" src="http://localhost/rass_prototype/public/src/app.js"></script>
+	<script type="text/javascript" src="http://localhost/rass_prototype/public/src/controllers.js"></script>
+	<script type="text/javascript" src="http://localhost/rass_prototype/public/src/services.js"></script>
+</body>
+</html>

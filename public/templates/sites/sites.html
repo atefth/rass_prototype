@@ -1,0 +1,21 @@
+<div class="row">
+  <a ng-click="createSite()" class="btn btn-small btn-primary">Add New</a>
+</div>
+<div class="row">
+  <table class="table sitetable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="site in sites">
+        <td>{{ site.name }}</td>
+        <td><a ng-click="editSite(site.id)" class="btn btn-small btn-primary">edit</a></td>
+        <td><a ng-click="deleteSite(site.id)" class="btn btn-small btn-danger">delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

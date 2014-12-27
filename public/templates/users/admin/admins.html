@@ -1,0 +1,27 @@
+<div class="row">
+  <a ng-click="createAdmin()" class="btn btn-small btn-primary">Add New</a>
+</div>
+<div class="row">
+  <table class="table admintable">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Username</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="admin in admins">
+        <td>{{ admin.first_name }}</td>
+        <td>{{ admin.last_name }}</td>
+        <td>{{ admin.email }}</td>
+        <td>{{ admin.username }}</td>
+        <td><a ng-click="editAdmin(admin.id)" class="btn btn-small btn-primary">edit</a></td>
+        <td><a ng-click="deleteAdmin(admin.id)" class="btn btn-small btn-danger">delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

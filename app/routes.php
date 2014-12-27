@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', 'HomeController@index');
+
+Route::group(array('prefix' => 'api', 'after' => 'allowOrigin'), function()
 {
-	return View::make('hello');
+	Route::resource('admins', 'AdminController');
+	Route::resource('swipers', 'SwiperController');
+	Route::resource('sites', 'SiteController');
+	Route::resource('zones', 'ZoneController');
 });

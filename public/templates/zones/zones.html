@@ -1,0 +1,21 @@
+<div class="row">
+  <a ng-click="createZone()" class="btn btn-small btn-primary">Add New</a>
+</div>
+<div class="row">
+  <table class="table zonetable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="zone in zones">
+        <td>{{ zone.name }}</td>
+        <td><a ng-click="editZone(zone.id)" class="btn btn-small btn-primary">edit</a></td>
+        <td><a ng-click="deleteZone(zone.id)" class="btn btn-small btn-danger">delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
